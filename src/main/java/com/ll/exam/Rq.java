@@ -47,7 +47,11 @@ public class Rq {
 
     }
 
-    public void appendBody(String formatted) throws IOException {
-        resp.getWriter().append(formatted);
+    public void appendBody(String formatted) {
+        try {
+            resp.getWriter().append(formatted);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
