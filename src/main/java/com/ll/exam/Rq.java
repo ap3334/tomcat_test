@@ -10,8 +10,8 @@ import java.net.http.HttpResponse;
 
 public class Rq {
 
-    HttpServletRequest req;
-    HttpServletResponse resp;
+    private final HttpServletRequest req;
+    private final HttpServletResponse resp;
 
     public Rq(HttpServletRequest req, HttpServletResponse resp) {
 
